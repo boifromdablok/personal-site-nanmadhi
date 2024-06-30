@@ -1,0 +1,112 @@
+<!DOCTYPE html> <!last edit 25Jun-24 00:00>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanmadhi C</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="w3pro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    body,h1{font-family:"Playwrite GB S", cursive}
+    .w3-amber{color:#001F3F!important;background-color:#FFFFFF!important}
+    aside{
+        padding-top: 0;
+        float: right;
+    }
+</style>
+
+<body>
+    <nav class="w3-sidebar w3-amber w3-bar-block w3-card w3-collapse" style="z-index:3;width:250px;" id="mySidebar">
+        <h3 class="w3-bar-item w3-opacity"><center><i class="fa fa-user-o"></i> Nanmadhi C</center></h3>
+        <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()"> Close <i class="fa fa-remove"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button"><i class="lni lni-briefcase-alt"></i> About Me</a>
+        <a href="biography.html" class="w3-bar-item w3-button"><i class="lni lni-travel"></i> Biography</a>
+        <a href="gallery.html" class="w3-bar-item w3-button"><i class="lni lni-gallery"></i> Gallery</a>
+        <a href="blogs.html" class="w3-bar-item w3-button"><i class="lni lni-blogger"></i> Blog</a>
+        <a href="skills.html" class="w3-bar-item w3-button"><i class="lni lni-gift"></i> Skills</a>
+        <a href="recom.html" class="w3-bar-item w3-button"><i class="lni lni-video"></i> Recommendations</a>
+        <a href="contact.html" class="w3-bar-item w3-button"><i class="lni lni-phone"></i> Contact</a>
+        <a href="cv.html" class="w3-bar-item w3-card w3-button">CV</a>
+        
+        <!-- <div class="w3-display-bottomleft w3-container" style="padding-bottom:10px">
+            <i class="lni lni-sun w3-large"></i>
+            <label class="switch">
+                <input onclick="myFunction()" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <i class="lni lni-night w3-large"></i>
+        </div> -->
+    </nav>
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+        <div id="myTop" class="w3-container w3-top w3-theme w3-large" style="background-color:#F8F8FF">
+            <p>
+                <i class="fa fa-bars w3-button w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+                <span id="myIntro" class="w3-hide">About Me</span>
+            </p>
+        </div>
+
+        <header class="w3-container w3-theme" style="padding:64px 64px">
+            <h1 class="w3-xxxlarge">About Me</h1>
+        </header>
+
+        <div class="w3-container" style="padding:32px">
+            <section class="w3-container w3-margin">
+                    <aside> 
+                        <img src="images/992682.jpg" class="w3-round-xlarge w3-card" alt="*image" width="200px" height="299.6px" onclick="document.getElementById('modal01').style.display='block'">
+                        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                            <span class="w3-button w3-hover w3-xlarge w3-display-topright">&times;</span>
+                            <div class="w3-modal-content w3-animate-zoom">
+                                <img src="images/992682.jpg" style="width:100%">
+                            </div>
+                        </div>
+                    </aside>
+                <p>Hello! I'm Nanmadhi C, a 2nd-year Electronics and Engineering student based in the vibrant city of Chennai. My journey through the world of electronics and engineering has been both challenging and rewarding, equipping me with a solid foundation in both theoretical knowledge and practical skills. Although I haven't had any major achievements to showcase just yet, I'm passionate about learning and constantly strive to improve and innovate.</p>
+                <p>When I'm not immersed in circuits and programming, you'll find me exploring various forms of entertainment. I'm an avid movie buff with a special place in my heart for films from different cultures and genres. Whether it's the latest blockbuster or a classic masterpiece, I'm always up for a good movie night.</p>
+                <p>My love for storytelling extends to anime and manga/comics. I enjoy diving into the intricate plots and diverse characters, drawing inspiration from the creativity and artistry involved in these mediums. From epic adventures to heartwarming tales, I appreciate the wide range of narratives that anime and manga/comics offer.</p>
+                <p>Music is another significant part of my life. My playlist is a melting pot of genres, reflecting my eclectic taste. Whether it's rock, pop, classical, or electronic, I find joy in discovering new artists and sounds. Music not only entertains me but also fuels my creativity and helps me stay focused during long study sessions.</p>
+                <p>Gaming is another passion of mine. I love exploring different game worlds, whether it's through action-packed adventures, strategic challenges, or immersive role-playing games. Gaming helps me unwind and often provides fresh perspectives that I can apply to my studies.</p>
+                <p>I'm excited about what the future holds and am eager to contribute to the field of electronics and engineering. As I continue my academic journey, I aim to participate in more projects, internships, and collaborations to enhance my skills and gain real-world experience.</p>
+                <p>Thank you for taking the time to learn a bit about me. Feel free to connect with me to discuss anything from electronics to movies, anime, music, and games!</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Change style of top container on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+            document.getElementById("myIntro").classList.add("w3-show-inline-block");
+          } else {
+            document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+            document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+          }
+        }
+
+        // Accordions
+        function myAccordion(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme";
+          } else { 
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className = 
+            x.previousElementSibling.className.replace(" w3-theme", "");
+          }
+        }        
+    </script>
+</body>
+</html>
