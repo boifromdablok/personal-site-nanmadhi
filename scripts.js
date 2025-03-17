@@ -4,51 +4,66 @@ function startLoader() {
 
     function updateCounter() {
         if (currentValue >= 100) {
-            counterElement.textContent = "100"; // Ensure it ends at 100
-            revealContent(); // Trigger the reveal animation
+            counterElement.textContent = "100"; 
+            revealContent(); 
             return;
         }
-
-        currentValue++; // Steady increase
+        currentValue++; 
         counterElement.textContent = currentValue;
-
-        setTimeout(updateCounter, 30); // Adjust speed (smaller = faster)
+        setTimeout(updateCounter, 10);
     }
 
     updateCounter();
 }
 
 function revealContent() {
-    // Fade out the counter
     gsap.to(".counter", {
-        duration: 0.5,
+        duration: 0.3, 
         opacity: 0,
         onComplete: () => document.querySelector(".counter").remove()
     });
 
-    // Fade out the overlay (black bars)
     gsap.to(".overlay", {
-        duration: 1,
+        duration: 0.8, 
         opacity: 0,
-        delay: 0.5,
+        delay: 0.2, 
         onComplete: () => document.querySelector(".overlay").remove()
     });
 
-    // Make the header visible and animate it
     gsap.to(".header", {
-        opacity: 1,  // Ensure it's fully visible
-        duration: 1,
-        delay: 1
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.5
     });
 
     gsap.from(".h1", {
-        delay: 1,
-        y: 50,  // Subtle slide-up effect
-        duration: 1,
-        stagger: 0.1, // More natural stagger
+        delay: 0.5,
+        y: 30, 
+        duration: 0.5,
+        stagger: 0.05, 
         ease: "power3.out",
         opacity: 0
     });
 }
 
 startLoader();
+
+// ** Image Changing Logic **
+const images = ["assets/full-image1.jpg", "assets/full-image2.jpg", "assets/full-image3.jpg"];
+let currentImageIndex = 0;
+
+function changeImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    let newImage = `url('${images[currentImageIndex]}')`;
+
+    // Change the background image for each letter while keeping positions intact
+    document.querySelectorAll(".h1").forEach((letter, index) => {
+        letter.style.backgroundImage = newImage;
+    });
+}
+
+// ** Apply first image immediately & start loop **
+document.addEventListener("DOMContentLoaded", () => {
+    changeImage(); // Set first image
+    setInterval(changeImage, 5000); // Change every 5s
+});

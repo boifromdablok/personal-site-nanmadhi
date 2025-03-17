@@ -11,24 +11,91 @@ body {
     overflow: hidden;
     background: #222;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+nav div{
+    display:flex;
+    padding: 1em;
+    gap: 5em;
+}
+
+nav div a{
+    text-decoration: none;
+    color:#888;
+    font-family: "Boogaloo", serif;
+    font-size: 2vw;
+    transition: font-size 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    nav div {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    nav div a {
+        font-size: 5vw; 
+    }
+}
+
+@media (max-width: 480px) {
+    nav div a {
+        font-size: 6vw; 
+    }
 }
 
 .header {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.2em;
-    opacity: 0;  /* Initially hidden, but revealed after countdown */
+    padding: 2em;
+    gap: 2em;
+    opacity: 0; 
+    position: relative;
+    background: none;
 }
 
 .header .h1 {
+    position: relative;
     font-family: "Boogaloo", serif;
-    font-size: 12vw;
-    color: #888;
+    font-size: 16vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: url('assets/full-image1.jpg') center/cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background 0.5s ease-in-out;
+    line-height: 1.125;
 }
+
+/* Position each letter correctly to align with the image */
+.header .h1:nth-child(1) { background-position: 0% 50%; }
+.header .h1:nth-child(2) { background-position: 10% 50%; }
+.header .h1:nth-child(3) { background-position: 20% 50%; }
+.header .h1:nth-child(4) { background-position: 30% 50%; }
+.header .h1:nth-child(5) { background-position: 40% 50%; }
+.header .h1:nth-child(6) { background-position: 50% 50%; }
+.header .h1:nth-child(7) { background-position: 60% 50%; }
+.header .h1:nth-child(8) { background-position: 70% 50%; }
+.header .h1:nth-child(9) { background-position: 80% 50%; }
 
 .overlay {
     position: fixed;
